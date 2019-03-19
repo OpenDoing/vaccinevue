@@ -40,6 +40,10 @@
         </router-link>
       </flexbox-item>
     </flexbox>
+    <divider>这是我的底线</divider>
+    <divider></divider>
+    <divider></divider>
+    <divider></divider>
     <BackBottomTab></BackBottomTab>
   </div>
 </template>

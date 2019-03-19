@@ -42,6 +42,8 @@
       </flexbox-item>
       <flexbox-item :span="2"></flexbox-item>
     </flexbox>
+    <divider></divider>
+    <divider></divider>
     <confirm v-model="showConfirm"
              title="温馨提示"
              theme="android"
@@ -111,12 +113,12 @@ export default {
       this.showConfirm = true
     },
     onConfirm(val) {
-      const url = config.base_url + '/money/del?id=' + val
+      const url = config.base_url + '/baby/del?id=' + val
       axios
         .delete(url)
         .then(response=>{
           this.$vux.toast.text('删除成功！', 'bottom')
-          this.$router.push({path: '/'})
+          this.$router.push({path: '/vaccine'})
         })
       this.showConfirm = false
     },

@@ -67,12 +67,14 @@ export default {
 
     },
     addVaccine() {
+      const uid = localStorage.getItem('userId')
       const url = config.base_url + '/baby/add'
       axios.post(url,{
         byname :this.bname,
         vname: this.vname[0],
         itime: this.today,
-        bnumber:this.bnumber
+        bnumber:this.bnumber,
+        uid: uid
       })
         .then(response=>{
           this.$vux.toast.text('添加成功！', 'bottom')

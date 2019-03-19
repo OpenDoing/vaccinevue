@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header :left-options="{showBack: false}">用户管理</x-header>
+    <x-header :left-options="{showBack: false}" title="用户管理"><div slot="right" @click="quit">退出</div></x-header>
     <flexbox orient="vertical" style="margin-top: 15px">
       <flexbox-item v-for="user in users" :key="user.id" style="margin-top: 15px;border-bottom: 10px solid #F5F5F5;">
         <flexbox>
@@ -84,6 +84,10 @@ export default {
           })
         this.reload()
 
+      },
+      quit(){
+        window.localStorage.clear();
+        this.$router.push({path: '/'})
       }
     }
   }

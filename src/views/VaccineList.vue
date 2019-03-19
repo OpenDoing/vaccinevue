@@ -22,7 +22,7 @@
           <flexbox-item>
             <flexbox>
               <flexbox-item :span="7">
-                <p style="padding-left: 15px">接种批号：</p>
+                <p style="padding-left: 15px">疫苗批号：</p>
               </flexbox-item>
               <flexbox-item>
                 <p style="color: #EA5A49">{{vaccine.bnumber}}</p>
@@ -82,7 +82,9 @@ export default {
   },
   methods:{
     init() {
-      const url = config.base_url + '/baby/all'
+      const uid = localStorage.getItem('userId')
+      console.log(uid)
+      const url = config.base_url + '/baby/getSomeone?uid=' + uid
       axios
         .get(url)
         .then(response=>{

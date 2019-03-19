@@ -69,6 +69,7 @@ export default {
           .then(response=>{
             let data = response.data
             this.$vux.toast.text('修改成功', 'bottom')
+            window.localStorage.clear();
             this.$router.push({path: '/'})
           })
           .catch(err=>{
