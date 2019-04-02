@@ -11,6 +11,8 @@ import  { LoadingPlugin } from 'vux'
 Vue.use(LoadingPlugin)
 Vue.use(ToastPlugin)
 Vue.use(ElementUI)
+import Mui from 'vue-awesome-mui'
+Vue.use(Mui)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -16,6 +16,7 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "vue": "^2.5.2",
+    "vue-awesome-mui": "^1.7.3",
     "vue-router": "^3.0.1",
     "vux": "^2.9.2",
     "vux-loader": "^1.2.9"
